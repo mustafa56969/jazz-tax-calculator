@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ur" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, interactive-widget=resizes-content">
+    
+    <!-- Primary Ultra SEO Meta Tags -->
+    <title>Jazz Balance Calculator 2026 | Jazz 100 Load Balance & Tax Rate | جاز بیلنس کیلکولیٹر</title>
+    <meta name="title" content="Jazz Balance Calculator 2026 | Jazz 100 Load Balance & Tax Rate">
+    <meta name="description" content="Jazz load tax calculator 2026. Calculate Jazz 100 load balance, 500 load tax, WHT tax rate (0.8696 factor). Jazz balance check after tax deduction. جاز ٹیکس کیلکولیٹر">
+    <meta name="keywords" content="jazz tax calculator, jazz 100 load balance, jazz 100 load balance tax, jazz load tax calculator, jazz balance check, jazz load balance after tax 2026, jazz balance calculator pakistan, jazz 500 load balance, jazz 1000 load balance, jazz withholding tax, jazz card tax calculator, how much balance on 100 load jazz, jazz 50 card balance, jazz tax percentage 2026, jazz sim load tax, kitna balance milega, jazz load par kitna tax lagta hai, jazz easyload balance, jazz cash load tax, easypaisa jazz load tax, جاز بیلنس کیلکولیٹر, جاز لوڈ ٹیکس">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="Jazz Balance Calculator">
+    <link rel="canonical" href="https://jazz-tax-calculator.vercel.app/">
+
+    <!-- Open Graph / Social SEO -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jazz-tax-calculator.vercel.app/">
+    <meta property="og:title" content="Jazz Balance Calculator 2026 | Instant Tax & Net Balance">
+    <meta property="og:description" content="Calculate instant net balance after WHT tax on Jazz load (50, 100, 200, 500, 1000). Reverse calculate needed load for desired balance.">
+    <meta property="og:locale" content="ur_PK">
+    <meta property="og:locale:alternate" content="en_US">
+
+    <!-- Schema Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Jazz Balance Calculator",
+      "alternateName": ["Jazz Load Tax Calculator", "جاز بیلنس کیلکولیٹر"],
+      "url": "https://jazz-tax-calculator.vercel.app/",
+      "description": "Instant tool to calculate Jazz mobile balance after withholding tax and reverse calculate required load for target balance in Pakistan.",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "All",
+      "inLanguage": ["en", "ur"],
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "PKR" }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much balance do I get on 100 PKR Jazz load?",
+          "acceptedAnswer": { "@type": "Answer", "text": "On a 100 PKR Jazz load, you get 86.96 PKR net balance after withholding tax (WHT) deduction of 13.04 PKR." }
+        },
+        {
+          "@type": "Question",
+          "name": "Jazz 100 PKR load par kitna balance milta hai?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Jazz ke 100 rupaye ke load par 86.96 PKR balance milta hai aur 13.04 PKR tax (13.04%) kat-ta hai." }
+        },
+        {
+          "@type": "Question",
+          "name": "جاز 100 کے لوڈ پر کتنا بیلنس ملتا ہے؟",
+          "acceptedAnswer": { "@type": "Answer", "text": "جاز 100 روپے کے لوڈ پر 86.96 روپے کا نیٹ بیلنس ملتا ہے جبکہ 13.04 روپے ودہولڈنگ ٹیکس کٹتا ہے۔" }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Google Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        m3: {
+                            primary: '#6750A4',
+                            onPrimary: '#FFFFFF',
+                            primaryContainer: '#EADDFF',
+                            onPrimaryContainer: '#21005D',
+                            surface: '#FEF7FF',
+                            onSurface: '#1D1B20',
+                            surfaceVariant: '#E7E0EC',
+                            onSurfaceVariant: '#49454F',
+                            outline: '#79747E',
+                            jazzRed: '#D32F2F',
+                            cardBg: '#F7F2FA'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #F4F0F7;
+            font-family: 'Google Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        #app-wrapper {
+            min-height: 100vh;
+            min-height: 100dvh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .m3-card {
+            background: #FEF7FF;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+            border-radius: 28px;
+            width: 100%;
+            max-width: 360px;
+        }
+
+        .chip {
+            transition: all 0.2s ease;
+        }
+
+        .chip-active {
+            background-color: #EADDFF !important;
+            color: #21005D !important;
+            border-color: #6750A4 !important;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="text-m3-onSurface">
+
+    <main id="app-wrapper">
+
+        <!-- Clean Calculator UI Card -->
+        <article class="m3-card p-6 border border-m3-surfaceVariant">
+            
+            <!-- Clean Header -->
+            <header class="flex items-center gap-3 mb-6">
+                <div class="w-11 h-11 rounded-2xl bg-m3-primaryContainer flex items-center justify-center text-m3-primary">
+                    <span class="material-symbols-outlined text-2xl">calculate</span>
+                </div>
+                <div>
+                    <h1 class="text-lg font-bold tracking-tight text-m3-onSurface">Jazz Calculator</h1>
+                    <p class="text-xs text-m3-onSurfaceVariant">Instant Tax & Balance (2026)</p>
+                </div>
+            </header>
+
+            <!-- Field 1: Load Amount -->
+            <div class="mb-4 bg-white border border-m3-surfaceVariant p-3.5 rounded-2xl shadow-sm">
+                <label for="amountInput" class="block text-xs font-bold text-m3-primary mb-1.5">
+                    Load Amount
+                </label>
+                <div class="relative flex items-center">
+                    <span class="absolute left-3.5 text-lg font-bold text-m3-primary">Rs.</span>
+                    <input 
+                        type="number" 
+                        id="amountInput" 
+                        placeholder="100" 
+                        value="" 
+                        min="1"
+                        inputmode="decimal"
+                        class="w-full bg-white border border-m3-surfaceVariant focus:border-m3-primary rounded-xl py-2 pl-10 pr-3 text-lg font-bold text-m3-onSurface outline-none transition-all"
+                        oninput="calculateFromLoad()"
+                        autofocus
+                    />
+                </div>
+            </div>
+
+            <!-- Quick Chips -->
+            <div class="mb-5 flex flex-wrap gap-1.5" aria-label="Quick Load Options">
+                <button type="button" onclick="setAmount(50)" class="chip border border-m3-outline/20 px-3 py-1 rounded-xl text-xs font-medium bg-white hover:bg-m3-primaryContainer/30">50</button>
+                <button type="button" onclick="setAmount(100)" class="chip border border-m3-outline/20 px-3 py-1 rounded-xl text-xs font-medium bg-white hover:bg-m3-primaryContainer/30">100</button>
+                <button type="button" onclick="setAmount(200)" class="chip border border-m3-outline/20 px-3 py-1 rounded-xl text-xs font-medium bg-white hover:bg-m3-primaryContainer/30">200</button>
+                <button type="button" onclick="setAmount(500)" class="chip border border-m3-outline/20 px-3 py-1 rounded-xl text-xs font-medium bg-white hover:bg-m3-primaryContainer/30">500</button>
+                <button type="button" onclick="setAmount(1000)" class="chip border border-m3-outline/20 px-3 py-1 rounded-xl text-xs font-medium bg-white hover:bg-m3-primaryContainer/30">1000</button>
+            </div>
+
+            <!-- Field 2: Net Balance Needed (Prominent, Centralized & Bada Text) -->
+            <div class="mb-5 bg-m3-cardBg border-2 border-m3-primaryContainer p-4 rounded-2xl text-center">
+                <label for="netBalanceInput" class="block text-xs font-bold uppercase tracking-wider text-m3-primary mb-2">
+                    Net Balance Needed
+                </label>
+                <div class="relative flex items-center justify-center">
+                    <span class="text-2xl font-black text-m3-primary mr-1">Rs.</span>
+                    <input 
+                        type="number" 
+                        id="netBalanceInput" 
+                        placeholder="86.96" 
+                        value="" 
+                        min="1"
+                        inputmode="decimal"
+                        class="w-full bg-white border border-m3-surfaceVariant focus:border-m3-primary rounded-xl py-2.5 px-3 text-2xl font-black text-m3-primary text-center outline-none transition-all shadow-inner"
+                        oninput="calculateFromNetBalance()"
+                    />
+                </div>
+            </div>
+
+            <!-- Tax Summary -->
+            <div class="flex justify-between items-center text-xs text-m3-onSurfaceVariant px-1 mb-6">
+                <span>Tax Deducted (13.04%):</span>
+                <span class="font-bold text-m3-jazzRed" id="whtDisplay">Rs. 0.00</span>
+            </div>
+
+            <!-- Copy Button -->
+            <button type="button" onclick="copyResult()" class="w-full bg-m3-primary text-m3-onPrimary py-3.5 px-4 rounded-2xl font-semibold text-sm flex items-center justify-center gap-2 hover:opacity-95 active:scale-[0.98] transition-all">
+                <span class="material-symbols-outlined text-base">content_copy</span>
+                <span>Copy Calculation</span>
+            </button>
+
+            <!-- Collapsible SEO Section -->
+            <details class="mt-4 border-t border-m3-surfaceVariant pt-3 text-xs text-m3-onSurfaceVariant">
+                <summary class="cursor-pointer font-medium hover:text-m3-primary flex items-center justify-between">
+                    <span>Jazz Load Tax Rates & Info</span>
+                    <span class="material-symbols-outlined text-sm">expand_more</span>
+                </summary>
+                <div class="mt-2 space-y-2 text-[11px] leading-relaxed pt-1">
+                    <p>Calculate your <strong>Jazz 100 load balance</strong>, tax deductions, and withholding tax (WHT) instantly. Official Jazz load factor is <strong>0.8696</strong>.</p>
+                    <ul class="list-disc pl-4 space-y-0.5">
+                        <li><strong>Rs. 50 Load:</strong> Net Balance = Rs. 43.48 (Tax: Rs. 6.52)</li>
+                        <li><strong>Rs. 100 Load:</strong> Net Balance = Rs. 86.96 (Tax: Rs. 13.04)</li>
+                        <li><strong>Rs. 500 Load:</strong> Net Balance = Rs. 434.80 (Tax: Rs. 65.20)</li>
+                    </ul>
+                </div>
+            </details>
+
+            <!-- Hidden SEO Keywords Container -->
+            <div class="sr-only" aria-hidden="true">
+                <h2>Jazz Tax Calculator 2026 Pakistan</h2>
+                <p>Jazz 100 load balance tax kitna hai? Easyload tax, JazzCash load tax calculation, Easypaisa Jazz load balance check after tax, Jazz card balance check formula, 0.8696 multiplier factor.</p>
+                <p>جاز ٹیکس کیلکولیٹر 2026 - جاز 100 روپے کے لوڈ پر کتنا بیلنس ملتا ہے؟ 500، 200، 1000 کے ریچارج پر نیٹ بیلنس اور ودہولڈنگ ٹیکس معلوم کریں۔</p>
+            </div>
+
+            <!-- Toast Notification -->
+            <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-m3-onSurface text-m3-surface text-xs font-medium px-4 py-2 rounded-full opacity-0 pointer-events-none transition-all duration-300 shadow-lg">
+                Copied!
+            </div>
+
+        </article>
+
+    </main>
+
+    <!-- Vercel Analytics Script -->
+    <script src="/_vercel/insights/script.js"></script>
+
+    <script>
+        const FACTOR = 0.8696;
+
+        if (window.visualViewport) {
+            window.visualViewport.addEventListener('resize', () => {
+                const wrapper = document.getElementById('app-wrapper');
+                wrapper.style.minHeight = `${window.visualViewport.height}px`;
+            });
+        }
+
+        function calculateFromLoad() {
+            const loadInput = document.getElementById('amountInput');
+            const netInput = document.getElementById('netBalanceInput');
+            let amount = parseFloat(loadInput.value);
+
+            if (isNaN(amount) || amount <= 0) {
+                netInput.value = "";
+                document.getElementById('whtDisplay').innerText = "Rs. 0.00";
+                updateChipStyles(0);
+                return;
+            }
+
+            let netBalance = amount * FACTOR;
+            let tax = amount - netBalance;
+
+            netInput.value = netBalance.toFixed(2);
+            document.getElementById('whtDisplay').innerText = `Rs. ${tax.toFixed(2)}`;
+
+            updateChipStyles(amount);
+        }
+
+        function calculateFromNetBalance() {
+            const loadInput = document.getElementById('amountInput');
+            const netInput = document.getElementById('netBalanceInput');
+            let netNeeded = parseFloat(netInput.value);
+
+            if (isNaN(netNeeded) || netNeeded <= 0) {
+                loadInput.value = "";
+                document.getElementById('whtDisplay').innerText = "Rs. 0.00";
+                updateChipStyles(0);
+                return;
+            }
+
+            let requiredLoad = netNeeded / FACTOR;
+            let tax = requiredLoad - netNeeded;
+
+            loadInput.value = requiredLoad.toFixed(2);
+            document.getElementById('whtDisplay').innerText = `Rs. ${tax.toFixed(2)}`;
+
+            updateChipStyles(Math.round(requiredLoad));
+        }
+
+        function setAmount(val) {
+            document.getElementById('amountInput').value = val;
+            calculateFromLoad();
+        }
+
+        function updateChipStyles(currentVal) {
+            const chips = document.querySelectorAll('.chip');
+            chips.forEach(chip => {
+                const chipValue = parseInt(chip.innerText);
+                if (chipValue === currentVal) {
+                    chip.classList.add('chip-active');
+                } else {
+                    chip.classList.remove('chip-active');
+                }
+            });
+        }
+
+        function copyResult() {
+            const amount = document.getElementById('amountInput').value || '0';
+            const netBalance = document.getElementById('netBalanceInput').value || '0';
+            const tax = document.getElementById('whtDisplay').innerText;
+            
+            if (parseFloat(amount) <= 0) return;
+
+            const textToCopy = `Jazz Load: Rs. ${amount}\nNet Balance: Rs. ${netBalance}\nTax: ${tax}`;
+            
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(textToCopy);
+            } else {
+                const textarea = document.createElement('textarea');
+                textarea.value = textToCopy;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+            }
+
+            showToast("Copied!");
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            toast.innerText = msg;
+            toast.classList.remove('opacity-0', 'pointer-events-none');
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'pointer-events-none');
+            }, 1800);
+        }
+    </script>
+</body>
+</html>
+
